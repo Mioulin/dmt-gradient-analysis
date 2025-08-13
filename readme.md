@@ -322,10 +322,9 @@ If you use this code in your research, please cite:
 ```bibtex
 @software{psychedelic_gradient_analysis,
   title={Psychedelic Gradient Analysis: A toolkit for analyzing drug-induced changes in brain connectivity},
-  author={Your Name},
+  author={Zalina Dezhina},
   year={2024},
-  url={https://github.com/yourusername/psychedelic-gradient-analysis},
-  doi={10.5281/zenodo.XXXXXXX}
+  url={https://github.com/mioulin/dmt-gradient-analysis},
 }
 ```
 
