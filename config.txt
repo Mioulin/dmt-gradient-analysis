@@ -1,0 +1,64 @@
+# Configuration file for psychedelic gradient analysis
+
+# Data parameters
+data:
+  n_rois: 100
+  atlas_name: "schaefer"
+  yeo_networks: 7
+  resolution_mm: 2
+
+# Preprocessing parameters
+preprocessing:
+  standardize: true
+  memory_cache: "nilearn_cache"
+  verbose: 0
+
+# Gradient analysis parameters
+gradients:
+  n_components: 10
+  approach: "pca"  # Options: pca, dm, le
+  kernel: "normalized_angle"  # Options: normalized_angle, cosine, gaussian
+  random_state: 0
+
+# Statistical analysis parameters
+statistics:
+  alpha: 0.05
+  correction_method: "fdr"  # Options: fdr, bonferroni, none
+  effect_size_method: "cohens_d"  # Options: cohens_d, hedges_g
+  normality_test: true
+
+# Output parameters
+output:
+  base_dir: "results"
+  save_connectivity: true
+  save_gradients: true
+  save_statistics: true
+  save_figures: true
+  figure_format: "png"  # Options: png, pdf, svg
+  figure_dpi: 300
+
+# Visualization parameters
+visualization:
+  connectivity_cmap: "RdBu_r"
+  gradient_cmap: "viridis"
+  statistical_cmap: "hot"
+  figure_size: [10, 8]
+  font_size: 12
+
+# Network analysis parameters
+networks:
+  aggregate_function: "mean"  # Options: mean, median, std
+  include_within_network: true
+  include_between_network: true
+
+# Logging parameters
+logging:
+  level: "INFO"  # Options: DEBUG, INFO, WARNING, ERROR
+  log_to_file: true
+  log_filename: "analysis.log"
+
+# Computational parameters
+computation:
+  n_jobs: 1  # Number of parallel jobs (-1 for all cores)
+  memory_limit: "4GB"
+  chunk_size: 1000
